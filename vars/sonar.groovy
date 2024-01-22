@@ -5,4 +5,4 @@ def call(Map config) {
     def sourcesPath = config.sourcesPath ?: 'src'
     def sonarPropertiesPath = "${JENKINS_HOME}/workspace/${JOB_NAME}/sonarqube.properties"
     sh "mvn sonar:sonar -Dsonar.config.file=${sonarPropertiesPath}"
-}    
+}  
