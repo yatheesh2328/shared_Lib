@@ -1,8 +1,6 @@
 def call(String name = 'value'){
     echo "Running Sonar Analysis & ${name}"
-   withSonarQubeEnv('sonar') {
-    sh '''
+   sh '''
     mvn clean package sonar:sonar
     '''
-}
 }
