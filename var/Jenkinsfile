@@ -1,0 +1,17 @@
+@Library('library-demo') _
+pipeline {
+  agent any
+  stages {
+    stage('checkout') {
+      steps {
+        sh 'rm -rf bus_booking'
+        sh 'git clone https://github.com/tarundanda147/bus_booking.git'
+      }
+    }
+    stage('build') {
+      steps {
+        sh "mvn clean install"
+      }
+    }
+  }
+}
