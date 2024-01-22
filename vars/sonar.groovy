@@ -9,3 +9,4 @@ def runSonarQubeAnalysis() {
         -Dsonar.projectName=${bus-bookin} \
         -Dsonar.host.url=${http://13.40.155.22:9000}", 
         returnStatus: true
+                          }                      
