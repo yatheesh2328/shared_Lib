@@ -1,5 +1,8 @@
-def call(){
-withSonarQubeEnv(credentialsId: 'sonar') {
-sh 'mvn clean package sonar:sonar'
-}
-} 
+#!/usr/bin/env groovy
+
+   def call() {
+       // Your SonarQube scan steps go here
+       sh 'mvn sonar:sonar -Dsonar.projectKey=sonar-token -Dsonar.host.url=http://18.170.23.153:9000'
+   }
+
+   return this
